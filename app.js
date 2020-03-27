@@ -1,3 +1,4 @@
+// class
 class Product {
   title = 'DEFAULT';
   description;
@@ -7,6 +8,7 @@ class Product {
 const newProduct = new Product();
 console.log(newProduct);
 
+// constructor method
 class Book {
   title;
   synopsis;
@@ -23,3 +25,28 @@ class Book {
 
 const newBook = new Book('Mistborn', 'Allomancy', 'Brandon Sanderson', 2011);
 console.log(newBook);
+
+// this
+class song {
+   constructor(title, artist, releaseDate) {
+      this.title = title;
+      this.artist = artist;
+      this.releaseDate = releaseDate;
+   }
+
+   logTitle() {
+      console.log(this.title);
+   }
+
+   logArtist() {
+      console.log(this.artist);
+   }
+
+   document.querySelector('.log-title').addEventListener('click', this.logTitle());
+   document.querySelector('.log-artist').addEventListener('click', this.logArtist.bind(this));
+
+}
+
+const newSong = new song('sunflower', 'Post Malone', 2019);
+newSong.logTitle();
+newSong.logArtist();

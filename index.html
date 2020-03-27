@@ -34,5 +34,15 @@
       instead of properties as these fields only become actual object properties
       when you create objects by instantiating the class.
     </p>
+    <h3>This</h3>
+    <p>
+      The 'this' keyword can cause problems in objects and classes when trying
+      to refer to properties especially when we are using events where the
+      'this' context then refers to the html element emitting the event instead
+      of the object/class itself. The solution is to bind the method to 'this'
+      which in this case will refer to the object/class itself.
+    </p>
+    <button class="log-title">Log Title</button>
+    <button class="log-artist">Log Artist</button>
   </body>
 </html>
