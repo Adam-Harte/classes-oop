@@ -63,3 +63,25 @@ class App {
 
 App.init();
 console.log(App.name);
+
+// getters and setters
+class Car {
+   constructor(model, seats) {
+      this.modelTitle = model + '   ';
+      this.seats = seats;
+   }
+
+   get model() {
+      const modelName = this.modelTitle.trim();
+      return modelName;
+   }
+
+   setSeats(value) {
+      this.seats = value;
+   }
+}
+
+const newCar = new Car('Ford', 5);
+console.log(newCar.model);
+newCar.setSeats(7);
+console.log(newCar.seats);
