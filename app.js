@@ -85,3 +85,34 @@ const newCar = new Car('Ford', 5);
 console.log(newCar.model);
 newCar.setSeats(7);
 console.log(newCar.seats);
+
+// inheritance
+class Post {
+   constructor(title, date, creator) {
+      this.title = title;
+      this.date = date;
+      this.creator = creator;
+   }
+}
+
+class VideoPost extends Post {
+   constructor(title, date, creator, vidUrl) {
+      super(title, date, creator);
+      this.vidUrl = vidUrl;
+   }
+}
+
+class ImagePost extends Post {
+   constructor(title, date, creator, imgUrl) {
+      super(title, date, creator);
+      this.imgUrl = imgUrl;
+   }
+}
+
+const newVidPost = new VideoPost('vid1', 2020, 'Adam', 'adam.mp4');
+const newImgPost = new ImagePost('img1', 2020, 'Owen', 'Owen.png');
+
+console.log(newVidPost.title);
+console.log(newVidPost.vidUrl);
+console.log(newImgPost.title);
+console.log(newImgPost.imgUrl);
