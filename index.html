@@ -69,7 +69,17 @@
       extending has a constrcutor then that constructor will be called. If you
       need to extend a class and have both constructors called you need to run
       the 'super' method in the extended classes constructor to call the base
-      class constructor followed by your constructor logic.
+      class constructor followed by your constructor logic. Calling super should
+      always be done at the top of the constructor body before you define any
+      new properties for the sub class.
+    </p>
+    <h3>Method Definitions</h3>
+    <p>
+      We can define methods of classes in different ways we can do the typical
+      method synatx of name followed by parenthesis and function body or we can
+      define a method by assigning it a value like we do with a field but
+      assigning it an arrow function. The arrow function definition comes in
+      handy when you need to avoid problems with the 'this' context.
     </p>
   </body>
 </html>

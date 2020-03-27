@@ -116,3 +116,27 @@ console.log(newVidPost.title);
 console.log(newVidPost.vidUrl);
 console.log(newImgPost.title);
 console.log(newImgPost.imgUrl);
+
+// different method definitions
+class Person {
+   name = 'Adam';
+   age = 27;
+   occupation = 'Developer'
+
+   sayHi() {
+      console.log('hi!!!');
+   }
+
+   logAge = function() {
+      console.log(this.age);
+   }
+
+   logOccupation = () => {
+      console.log(this.occupation);
+   }
+}
+
+const adam = new Person();
+adam.sayHi();
+adam.logAge();
+adam.logOccupation();
