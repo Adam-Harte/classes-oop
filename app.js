@@ -50,3 +50,16 @@ class song {
 const newSong = new song('sunflower', 'Post Malone', 2019);
 newSong.logTitle();
 newSong.logArtist();
+
+// static methods and fields
+
+class App {
+   static init() {
+      console.log('initializing app...');
+   }
+
+   static name = 'new app';
+}
+
+App.init();
+console.log(App.name);
