@@ -140,3 +140,23 @@ const adam = new Person();
 adam.sayHi();
 adam.logAge();
 adam.logOccupation();
+
+// private properties
+class Property {
+   #type = 'house';
+   #bedrooms = 3;
+   price = 280;
+
+   logProperty() {
+      console.log(this.#type);
+      console.log(this.#bedrooms);
+   }
+}
+
+const newProperty = new Property();
+
+newProperty.logProperty();
+
+// instanceof
+console.log(adam instanceof Property);
+console.log(adam instanceof Person);
