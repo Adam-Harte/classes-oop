@@ -160,3 +160,14 @@ newProperty.logProperty();
 // instanceof
 console.log(adam instanceof Property);
 console.log(adam instanceof Person);
+
+// property descriptors and setting them
+console.log(Object.getOwnPropertyDescriptor(newProperty));
+Object.defineProperty(newProperty, 'price', {
+   configurable: true,
+   enumerable: true,
+   value: 280,
+   writable: false
+});
+newProperty.price = 300;
+console.log(newProperty.price);
